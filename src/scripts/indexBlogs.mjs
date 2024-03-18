@@ -43,12 +43,19 @@ fileNames.forEach((fileName) => {
   });
 });
 
-const client = new PineconeClient();
+let client;
+client = new PineconeClient();
+
 await client.init({
   apiKey: process.env.PINECONE_API_KEY,
   environment: process.env.PINECONE_ENVIRONMENT,
 });
+
+console.log (client);
+
+
 const pineconeIndex = client.Index(process.env.PINECONE_INDEX);
+console.log (client);
 
 await PineconeStore.fromDocuments(
   lanchainDocs,

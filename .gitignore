@@ -36,3 +36,11 @@ next-env.d.ts
 
 /.env.prod
 /fly.toml
+.idea/a16z-ai-getting-started.iml
+.idea/aws.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/codeStyles/Project.xml
+.idea/inspectionProfiles/Project_Default.xml
