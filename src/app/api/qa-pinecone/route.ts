@@ -1,9 +1,10 @@
 import { PineconeClient } from "@pinecone-database/pinecone";
 import dotenv from "dotenv";
-import { VectorDBQAChain } from "langchain/chains";
+
+
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
 import { OpenAI } from "langchain/llms/openai";
-import { PineconeStore } from "langchain/vectorstores/pinecone";
+import { PineconeStore } from '@langchain/pinecone';
 import { StreamingTextResponse, LangChainStream } from "ai";
 import { CallbackManager } from "langchain/callbacks";
 
@@ -31,7 +32,7 @@ export async function POST(request: Request) {
     callbackManager: CallbackManager.fromHandlers(handlers),
   });
 
-  const chain = VectorDBQAChain.fromLLM(model, vectorStore, {
+  const chain = RetrievalQA.fromLLM(model, vectorStore, {
     k: 1,
     returnSourceDocuments: true,
   });

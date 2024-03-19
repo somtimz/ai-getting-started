@@ -70,6 +70,9 @@ d. **Pinecone API key**
 - Fill in Dimension as `1536`
 - Once the index is successfully created, click on "API Keys" on the left side nav and create an API key: copy "Environment" value to `PINECONE_ENVIRONMENT` variable, and "Value" to `PINECONE_API_KEY`
 
+NOTE: The code was switched to use serverless index.
+
+
 e. **Supabase API key**
 - Create a Supabase instance [here](https://supabase.com/dashboard/projects); then go to Project Settings -> API 
 - `SUPABASE_URL` is the URL value under "Project URL"
